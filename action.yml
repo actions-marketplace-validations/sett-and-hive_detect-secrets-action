@@ -1,0 +1,9 @@
+# action.yml
+name: "Detect Secrets Action"
+description: "Use the Detect Secrets package to scan your repository for exposed secrets"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "lock"
+  color: "gray-dark"
