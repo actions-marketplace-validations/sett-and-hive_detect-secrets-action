@@ -6,5 +6,5 @@ This github action scans a repository usuing Yelp's [Detect Secrets](https://git
 
 ```
 - name: Detect Secrets
-  uses: evanextreme/detect-secrets@1.0.0
+  uses: evanextreme/detect-secrets-action@1.0.0
 ```
