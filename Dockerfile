@@ -1,8 +1,9 @@
-FROM python:3.7.6-alpine3.11
+FROM python:3-alpine
 
-RUN pip install detect-secrets==0.13.1
-RUN apk --no-cache add git less openssh
+RUN apk update && apk upgrade && apk --no-cache add bash git less openssh && pip install detect-secrets
 
 COPY entrypoint.sh /entrypoint.sh
+
+ENV DS_REQUIRE_BASELINE=0 DS_ADDL_ARGS="" DS_BASELINE_FILE="./.secrets.baseline"
 
 ENTRYPOINT ["/entrypoint.sh"]
