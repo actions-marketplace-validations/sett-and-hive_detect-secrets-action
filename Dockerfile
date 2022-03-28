@@ -1,6 +1,4 @@
-FROM python:3-alpine
-
-RUN apk update && apk upgrade && apk --no-cache add bash git less openssh && pip install --upgrade "git+https://github.com/ibm/detect-secrets.git@master#egg=detect-secrets"
+FROM ibmcom/detect-secrets:lates
 
 COPY entrypoint.sh /entrypoint.sh
 
