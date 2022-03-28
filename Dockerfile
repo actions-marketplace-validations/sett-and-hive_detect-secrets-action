@@ -1,4 +1,4 @@
-FROM ibmcom/detect-secrets:lates
+FROM ibmcom/detect-secrets:latest
 
 COPY entrypoint.sh /entrypoint.sh
 
