@@ -1,6 +1,6 @@
 FROM python:3-alpine
 
-RUN apk update && apk upgrade && apk --no-cache add bash git less openssh && pip install detect-secrets
+RUN apk update && apk upgrade && apk --no-cache add bash git less openssh && pip install --upgrade "git+https://github.com/ibm/detect-secrets.git@master#egg=detect-secrets"
 
 COPY entrypoint.sh /entrypoint.sh
 

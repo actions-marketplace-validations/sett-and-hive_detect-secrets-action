@@ -1,6 +1,6 @@
 # Detect Secrets Action
 
-This github action scans a repository usuing Yelp's [Detect Secrets](https://github.com/Yelp/detect-secrets) library.
+This github action scans a repository usuing IBM's [Detect Secrets](https://github.com/IBM/detect-secrets) library.
 
 ## Sample Configuration
 
@@ -9,7 +9,7 @@ This file is accessible at `./.github/workflows/main.yml` in the action's reposi
 ```
 ---
 
-# This runs Yelp's 'detect-secrets': https://github.com/Yelp/detect-secrets/blob/master/README.md
+# This runs IBM's 'detect-secrets': https://github.com/IBM/detect-secrets/blob/master/README.md
 
 name: Scan Code for Secrets
 
@@ -31,8 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Run Yelp's detect-secrets
-        uses: RobertFischer/detect-secrets-action@v2.0.0
+      - name: Run IBM's detect-secrets
+        uses: tomwillis608/detect-secrets-action@v2.0.0
       - name: Commit back .secrets.baseline (if it was missing)
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
