@@ -7,36 +7,21 @@ This github action scans a repository usuing IBM's [Detect Secrets](https://gith
 This file is accessible at `./.github/workflows/main.yml` in the action's repository.
 
 ```
----
-
-# This runs IBM's 'detect-secrets': https://github.com/IBM/detect-secrets/blob/master/README.md
-
-name: Scan Code for Secrets
-
-on:
-  pull_request:
-    - opened
-    - reopened
-    - ready_for_review
-    - synchronize
-  push:
-    branches:
-      - '**'
-    tags:
-      - '!**'
-
+name: detect-secrets
+on: [pull_request]
 jobs:
-  check-for-secrets:
+  detect-secrets:
     runs-on: 'ubuntu-latest'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run IBM's detect-secrets
-        uses: tomwillis608/detect-secrets-action@v2.0.0
+        uses: tomwillis608/detect-secrets-action@master
       - name: Commit back .secrets.baseline (if it was missing)
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "build(detect-secrets): Commit the newly-generated .secrets.baseline file"
+
 ```
 
 ## Environment Variables
