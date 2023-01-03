@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run IBM's detect-secrets
-        uses: tomwillis608/detect-secrets-action@master
+        uses: tomwillis608/detect-secrets-action@main
       - name: Commit back .secrets.baseline (if it was missing)
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
