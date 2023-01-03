@@ -1,4 +1,4 @@
-FROM ibmcom/detect-secrets:latest
+FROM ibmcom/detect-secrets:master-583-id-257787835-time-1668488211 
 
 COPY entrypoint.sh /entrypoint.sh
 
