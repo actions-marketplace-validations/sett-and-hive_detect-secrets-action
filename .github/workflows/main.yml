@@ -1,4 +1,4 @@
-# This runs IBM's 'detect-secrets': https://github.com/IBM/detect-secrets/blob/main/README.md
+# This runs IBM's 'detect-secrets': https://github.com/IBM/detect-secrets/blob/master/README.md
 
 name: detect-secrets
 on: [pull_request]
