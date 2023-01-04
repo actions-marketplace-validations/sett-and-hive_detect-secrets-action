@@ -3,6 +3,9 @@
 This github action scans a repository using IBM's
 [Detect Secrets](https://github.com/IBM/detect-secrets) library.
 
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/sett-and-hive/detect-secrets-action/main.svg)](https://results.pre-commit.ci/latest/github/sett-and-hive/detect-secrets-action/main)
+[![build status](https://img.shields.io/github/checks-status/sett-and-hive/detect-secrets-action/main)](https://img.shields.io/github/checks-status/sett-and-hive/detect-secrets-action/main)
+
 ## Sample Configuration
 
 This file is accessible at `./.github/workflows/main.yml` in the action's repository.
@@ -15,9 +18,9 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Run IBM's detect-secrets
-        uses: sett-and-hive/detect-secrets-action@main
+        uses: sett-and-hive/detect-secrets-action@v2.1.1
       - name: Commit back .secrets.baseline (if it was missing)
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
