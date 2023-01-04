@@ -6,4 +6,4 @@ runs:
   image: "Dockerfile"
 branding:
   icon: "lock"
-  color: "gray-dark"
+  color: "green"
