@@ -1,4 +1,8 @@
-FROM ibmcom/detect-secrets:master-583-id-257787835-time-1668488211
+FROM ibmcom/detect-secrets:redhat-ubi
+
+# Eliminate vulnerabilities found by trivy
+# CVE-2022-42898 krb5-libs
+RUN microdnf update
 
 COPY entrypoint.sh /entrypoint.sh
 
