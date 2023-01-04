@@ -1,5 +1,5 @@
 # action.yml
-name: "Easy detect-secrets"
+name: "Easy IBM detect-secrets"
 description: "Use IBM's detect-secrets package to scan your repository for exposed secrets"
 runs:
   using: "docker"
